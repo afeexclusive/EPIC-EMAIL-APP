@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Merriweather, serif;
+}
+
+main {
+	background: var(--bg, white);
+	color: var(--text, black);
+}
+
+main {
+	--gradDark: hsl(0, 100%, 100%);
+	--gradLight: hsl(240, 100%, 50%);
+	background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+	padding: 20px 20px 20px 20px;
+	min-height: 92vh;
+	text-align: center;
+}
+
+.wrapper {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.signin {
+	position: absolute;
+	top: 250px;
+	left: 80px;
+	border-radius:25px;
+}
+
+#parent {
+    text-align:center;
+    background-color:blue;
+    height:50vh;
+    width:50vh;
+}
+
+
+
+input.username {
+	position: relative;
+	top: 45px;
+	left: 0px;
+	height: 30px;
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 20px;
+}
+
+input.password {
+	position: relative;
+	top: 85px;
+	left: 0px;
+	height: 30px;
+	width: 100%;
+	border: none;
+	text-align: center;
+	font-size: 20px;
+}
+
+button.btnsignin{
+	position: absolute;
+	top: 230px;
+	left: 115px;
+	padding: 5px 25px 5px 25px;
+	border-radius: 10px;
+	color: blue;
+	background-color: white;
+	font-size: 16px
+}
+
+div.altsignup {
+	position: relative;
+	top: 135px;
+	left: 4px;
+	color: var(--text, white);
+}
+
+div.fpassword {
+position: relative;
+	top: 150px;
+	left: 8px;
+	color: var(--text, white);
+}
+
+p{
+  position:fixed;
+  left:80px;
+  top: 100px;
+}
+
+
+h1{
+  position:fixed;
+  left:50px;
+  top:50px;
+}
+

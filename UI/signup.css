@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Merriweather, serif;
+}
+
+label {
+	color: var(--text, white);
+}
+
+main {
+	background: var(--bg, white);
+	color: var(--text, black);
+}
+
+main {
+	--gradDark: hsl(0, 100%, 100%);
+	--gradLight: hsl(240, 100%, 50%);
+	background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+	padding: 20px 20px 20px 20px;
+	min-height: 80vh;
+	text-align: center;
+}
+
+.wrapper {
+	max-width: 60vh;
+	margin: 0 auto;
+}
+
+.signup {
+	position: absolute;
+	top: 14rem;
+	left: 80rem;
+}
+
+
+input.firstname {
+	position: relative;
+	top: 1rem;
+	left: 0.1rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+input.lastname {
+	position: relative;
+	top: 1rem;
+	left: 2rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+select{
+	position: relative;
+	top: 4.5rem;
+	left: -20.5rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+input.dob {
+	position: relative;
+	top: 2.5rem;
+	left: 12.2rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+input.mobilenum {
+	position: relative;
+	top: 6rem;
+	left: -10.4rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+input.email {
+	position: relative;
+	top: 6rem;
+	left: -8.2rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+input.password {
+	position: relative;
+	top: 8rem;
+	left: -5.4rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+input.conpassword {
+	position: relative;
+	top: 8rem;
+	left: -3rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+div.altsignin {
+	position: relative;
+	top: 23rem;
+	left: 0px;
+}
+
+button.adduser{
+	position: absolute;
+	top: 280px;
+	left: 150px;
+	padding: 5px 25px 5px 25px;
+	border-radius: 10px;
+	color: blue;
+	background-color: white;
+	font-size: 16px
+}
+
+
+button.btnsignup{
+	position: absolute;
+	top: 280px;
+	left: 150px;
+	padding: 5px 25px 5px 25px;
+	border-radius: 10px;
+	color: blue;
+	background-color: white;
+	font-size: 16px
+}
+
+p{
+  position:fixed;
+  left:80px;
+  top: 100px;
+}
+
+
+h1{
+  position:fixed;
+  left:50px;
+  top:50px;
+}
+
+
+#form {
+    top: 160px;
+    text-align:center;
+    left:38px;
+    background-color:none;
+    height:400px;
+    width:550px;
+}
