@@ -46,7 +46,6 @@ describe('User', () => {
             done();
           });
       });
-
       it('it should GET one user', (done) => {
         let newUser ={
           firstName: 'Afe',
