@@ -18,7 +18,9 @@ function signup() {
             dateOfBirth: dateOfBirth,
             password:password
         };
-        alert(reg.firstName+' '+reg.lastName+' '+ reg.gender+' '+reg.dateOfBirth+' '+reg.phone+' '+reg.prefEmail+' '+reg.password);
+        let regpost = JSON.stringify(reg);
+        document.getElementById('dis').innerHTML = regpost;
+        // alert(reg.firstName+' '+reg.lastName+' '+ reg.gender+' '+reg.dateOfBirth+' '+reg.phone+' '+reg.prefEmail+' '+reg.password);
     }else{
         alert('Password does not match');
     };
