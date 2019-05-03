@@ -152,7 +152,7 @@ button.adduser{
 }
 
 
-button.btnsignup{
+input.btnsignup{
 	position: absolute;
 	top: 280px;
 	left: 150px;

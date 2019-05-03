@@ -1,4 +1,7 @@
-function signup() {
+document.getElementById('btnsignup').addEventListener('click', signup);
+
+function signup(event) {
+    event.preventDefault();
     let firstName = document.getElementById('firstname').value;
     let lastName = document.getElementById('lastname').value;
     let gender = document.getElementById('gender').value;
@@ -16,16 +19,19 @@ function signup() {
             phone: phone,
             prefEmail: prefEmail,
             dateOfBirth: dateOfBirth,
-            password:password
+            password: password
         };
         fetch('http://localhost:3000/auth/signup',{
-            headers:{"content-Type": "application/json; charset=utf-8"},
-            method: 'post',
+            headers: {"Content-Type": "application/json"},
+            method: "POST",
+            mode: "cors", //cors, same-origin, no-cors
             body: JSON.stringify(reg)
-            .then(response => response.json())
-            .then(data => document.getElementById('dis').innerHTML = JSON.stringify(data))
+            // .then((res) => res.json()) NOTE: dont try to recieve server returned json
+            // .then((data) => JSON.stringify(data)) NOTE: if posible to return data from your endpoint
+            // .catch((error) => alert(error))
         });
-        // document.getElementById('dis').innerHTML = JSON.stringify(reg);
+        document.getElementById('dis').innerHTML = JSON.stringify(reg);
+        
         // alert(reg.firstName+' '+reg.lastName+' '+ reg.gender+' '+reg.dateOfBirth+' '+reg.phone+' '+reg.prefEmail+' '+reg.password);
     }else{
         alert('Password does not match');
