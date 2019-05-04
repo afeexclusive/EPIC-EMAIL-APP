@@ -30,7 +30,8 @@ function signup(event) {
             // .then((data) => JSON.stringify(data)) NOTE: if posible to return data from your endpoint
             // .catch((error) => alert(error))
         });
-        document.getElementById('dis').innerHTML = JSON.stringify(reg);
+        
+        // document.getElementById('dis').innerHTML = JSON.stringify(reg);
         
         // alert(reg.firstName+' '+reg.lastName+' '+ reg.gender+' '+reg.dateOfBirth+' '+reg.phone+' '+reg.prefEmail+' '+reg.password);
     }else{
