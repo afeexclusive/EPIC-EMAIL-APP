@@ -135,9 +135,9 @@ input.conpassword {
 }
 
 div.altsignin {
-	position: relative;
-	top: 23rem;
-	left: 0px;
+	position: absolute;
+	top: 25rem;
+	left: 120px;
 }
 
 button.adduser{
@@ -166,7 +166,8 @@ input.btnsignup{
 p{
   position:fixed;
   left:80px;
-  top: 100px;
+	top: 100px;
+	text-align: center;
 }
 
 
