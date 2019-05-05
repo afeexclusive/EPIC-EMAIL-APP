@@ -227,3 +227,17 @@ table{
 	border-collapse: collapse;
   width: 100%
 }
+
+#flymail{
+	background-image: url(./flymail.png);
+	position: absolute;
+	width: 40vh;
+	height: 25vh;
+	top: 30vh;
+	left: 55%;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	background-position: center;
+	opacity: 0.5;
+	
+}
