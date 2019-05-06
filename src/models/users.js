@@ -43,8 +43,8 @@ class User{
   }
 
   // To list a single groups
-  getOne(id) {
-  	return this.users.find(account => account.id === id);
+  getOne(prefEmail) {
+  	return this.users.find(account => account.prefEmail === prefEmail);
   }
   
   // To list all groups
@@ -52,8 +52,8 @@ class User{
     return this.users;
   }
    //To modify groups account details when necessary
-  update(id, data) {
-    const currentUser = this.getOne(id);
+  update(prefEmail, data) {
+    const currentUser = this.getOne(prefEmail);
     const index = this.users.indexOf(currentUser);
     this.users[index].firstName = data['firstName'] || currentUser.firstName;
     this.users[index].lastName = data['lastName'] || currentUser.lastName;
@@ -66,8 +66,8 @@ class User{
     return this.users[index];
   }
   // To delete or remove a groups: find the groups and replace/remove
-  delete(id) {
-    const currentUser = this.getOne(id);
+  delete(prefEmail) {
+    const currentUser = this.getOne(prefEmail);
     const index = this.users.indexOf(currentUser);
     this.users.splice(index, 1);
     return {};

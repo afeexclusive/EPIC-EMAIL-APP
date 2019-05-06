@@ -36,7 +36,7 @@ const User = {
   
   // Server response to GET verb that retrieves a user account
   viewOne(req, res) {
-    const currentUser = UserModel.getOne(req.params.id);
+    const currentUser = UserModel.getOne(req.params.prefEmail);
     if (!currentUser) {
       return res.status(404).send({'message': 'user not found'});
     }
@@ -45,21 +45,21 @@ const User = {
   
   // 
   update(req, res) {
-    const currentUser = UserModel.getOne(req.params.id);
+    const currentUser = UserModel.getOne(req.params.prefEmail);
     if (!currentUser) {
       return res.status(404).send({'message': 'user not found'});
     }
-    const updatedUser = UserModel.update(req.params.id, req.body)
+    const updatedUser = UserModel.update(req.params.prefEmail, req.body)
     return res.status(200).send(updatedUser);
   },
 
   //
   delete(req, res) {
-    const currentUser = UserModel.getOne(req.params.id);
+    const currentUser = UserModel.getOne(req.params.prefEmail);
     if (!currentUser) {
       return res.status(404).send({'message': 'user not found'});
     }
-    const ref = UserModel.delete(req.params.id);
+    const ref = UserModel.delete(req.params.prefEmail);
     return res.status(204).send({'message': 'user deleted'});
   }
 }

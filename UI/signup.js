@@ -26,14 +26,12 @@ function signup(event) {
             method: "POST",
             mode: "cors", //cors, same-origin, no-cors
             body: JSON.stringify(reg)
-            // .then((res) => res.json()) NOTE: dont try to recieve server returned json
-            // .then((data) => JSON.stringify(data)) NOTE: if posible to return data from your endpoint
+            // .then((res) => res.json()) NOTE: Never try to recieve server returned json
+            // .then((data) => JSON.stringify(data)) NOTE: if posible dont return data from your endpoint (you may need to do so because cause of testing)
             // .catch((error) => alert(error))
         });
+        window.location= 'file:///C:/Users/afe%20kunle/epicrepo/EPIC-EMAIL-APP/UI/reset-pasword.html';
         
-        // document.getElementById('dis').innerHTML = JSON.stringify(reg);
-        
-        // alert(reg.firstName+' '+reg.lastName+' '+ reg.gender+' '+reg.dateOfBirth+' '+reg.phone+' '+reg.prefEmail+' '+reg.password);
     }else{
         alert('Password does not match');
     };

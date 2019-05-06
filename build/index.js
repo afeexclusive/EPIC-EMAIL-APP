@@ -40,9 +40,9 @@ console.log('app running on port ', 3000);
 
 app.post('/auth/signup', _User2.default.create);
 app.get('/admin/user', _User2.default.view);
-app.get('/admin/user/:id', _User2.default.viewOne);
-app.put('/user/:id', _common2.default.checkToken, _User2.default.update);
-app.delete('/admin/user/:id', _User2.default.delete);
+app.get('/admin/user/:prefEmail', _User2.default.viewOne);
+app.put('/user/:prefEmail', _common2.default.checkToken, _User2.default.update);
+app.delete('/admin/user/:prefEmail', _User2.default.delete);
 app.post('/user/login', _User2.default.login);
 
 app.post('/admin/group', _Group2.default.create);

@@ -76,9 +76,9 @@ var User = function () {
     // To list a single user
   }, {
     key: 'getOne',
-    value: function getOne(id) {
+    value: function getOne(prefEmail) {
       return this.users.find(function (account) {
-        return account.id === id;
+        return account.prefEmail === prefEmail;
       });
     }
 
@@ -93,8 +93,8 @@ var User = function () {
 
   }, {
     key: 'update',
-    value: function update(id, data) {
-      var currentUser = this.getOne(id);
+    value: function update(prefEmail, data) {
+      var currentUser = this.getOne(prefEmail);
       var index = this.users.indexOf(currentUser);
       this.users[index].firstName = data['firstName'] || currentUser.firstName;
       this.users[index].lastName = data['lastName'] || currentUser.lastName;
@@ -110,8 +110,8 @@ var User = function () {
 
   }, {
     key: 'delete',
-    value: function _delete(id) {
-      var currentUser = this.getOne(id);
+    value: function _delete(prefEmail) {
+      var currentUser = this.getOne(prefEmail);
       var index = this.users.indexOf(currentUser);
       this.users.splice(index, 1);
       return {};

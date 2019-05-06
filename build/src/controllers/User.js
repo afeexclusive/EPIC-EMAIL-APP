@@ -43,7 +43,7 @@ var User = {
 
   // Server response to GET verb that retrieves a user account
   viewOne: function viewOne(req, res) {
-    var currentUser = _users2.default.getOne(req.params.id);
+    var currentUser = _users2.default.getOne(req.params.prefEmail);
     if (!currentUser) {
       return res.status(404).send({ 'message': 'user not found' });
     }
@@ -53,22 +53,22 @@ var User = {
 
   // 
   update: function update(req, res) {
-    var currentUser = _users2.default.getOne(req.params.id);
+    var currentUser = _users2.default.getOne(req.params.prefEmail);
     if (!currentUser) {
       return res.status(404).send({ 'message': 'user not found' });
     }
-    var updatedUser = _users2.default.update(req.params.id, req.body);
+    var updatedUser = _users2.default.update(req.params.prefEmail, req.body);
     return res.status(200).send(updatedUser);
   },
 
 
   //
   delete: function _delete(req, res) {
-    var currentUser = _users2.default.getOne(req.params.id);
+    var currentUser = _users2.default.getOne(req.params.prefEmail);
     if (!currentUser) {
       return res.status(404).send({ 'message': 'user not found' });
     }
-    var ref = _users2.default.delete(req.params.id);
+    var ref = _users2.default.delete(req.params.prefEmail);
     return res.status(204).send({ 'message': 'user deleted' });
   }
 };
