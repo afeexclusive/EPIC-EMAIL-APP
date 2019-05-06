@@ -41,9 +41,7 @@ main {
     width:50vh;
 }
 
-
-
-input.username {
+#username {
 	position: relative;
 	top: 45px;
 	left: 0px;
@@ -54,7 +52,7 @@ input.username {
 	font-size: 20px;
 }
 
-input.password {
+#password {
 	position: relative;
 	top: 85px;
 	left: 0px;
@@ -65,7 +63,7 @@ input.password {
 	font-size: 20px;
 }
 
-input.btnsignin{
+.btnsignin{
 	position: absolute;
 	top: 230px;
 	left: 115px;
@@ -77,30 +75,16 @@ input.btnsignin{
 	font: bold;
 }
 
-div.altsignup {
+#altsignup {
 	position: relative;
 	top: 135px;
 	left: 4px;
 	color: var(--text, white);
 }
 
-div.fpassword {
+#fpassword {
 position: relative;
 	top: 150px;
 	left: 8px;
 	color: var(--text, white);
 }
-
-p{
-  position:fixed;
-  left:80px;
-  top: 100px;
-}
-
-
-h1{
-  position:fixed;
-  left:50px;
-  top:50px;
-}
-

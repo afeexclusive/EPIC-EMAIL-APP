@@ -134,10 +134,10 @@ input.conpassword {
 	font-size: 0.7rem;
 }
 
-div.altsignin {
+p.altsignin {
 	position: absolute;
-	top: 25rem;
-	left: 120px;
+	top: 14rem;
+	left: 50px;
 }
 
 button.adduser{
