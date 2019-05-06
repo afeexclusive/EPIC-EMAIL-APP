@@ -65,7 +65,7 @@ input.password {
 	font-size: 20px;
 }
 
-button.btnsignin{
+input.btnsignin{
 	position: absolute;
 	top: 230px;
 	left: 115px;
@@ -73,7 +73,8 @@ button.btnsignin{
 	border-radius: 10px;
 	color: blue;
 	background-color: white;
-	font-size: 16px
+	font-size: 16px;
+	font: bold;
 }
 
 div.altsignup {
