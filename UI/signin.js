@@ -8,7 +8,8 @@ function signin(event) {
         prefEmail: prefEmail,
         password: password
     };
-    alert('amen')
+    alert('amen');
+
     
     // fetch('http://localhost:3000/user/login',{
     //     headers: {"Content-Type": "application/json"},
