@@ -1,3 +1,4 @@
+
 document.getElementById('btsignin').addEventListener('click', login)
 function login(event){
     event.preventDefault();
@@ -9,15 +10,27 @@ function login(event){
     };
 
     fetch('http://localhost:3000/user/login',{
-        headers: {"Content-Type": "application/json"},
-        method: "POST",
-        mode: "cors", //cors, same-origin, no-cors
-        body: JSON.stringify(pLogin)
+    headers: {"Content-Type": "application/json"},
+    method: "POST",
+    mode: "cors", //cors, same-origin, no-cors
+    body: JSON.stringify(pLogin)
     }).then((res) => res.json())
     .then((data) => { 
         let jtoken = JSON.stringify(data)
-        document.getElementById('dis').innerHTML = jtoken
+        if (jtoken.length < 70){
+            document.getElementById('dis').innerHTML = jtoken;
+            localStorage.setItem('sjt', jtoken);
+        }else{
+            let ptoken = JSON.parse(jtoken);
+        let mainToken = ptoken.AccessToken;
+        const dtoken = 'Bearer '+mainToken;
+        document.getElementById('dis').innerHTML = dtoken;
+        localStorage.setItem('sjt', dtoken);
+        }
+        
     });
-
-       
+    
 }
+
+
+

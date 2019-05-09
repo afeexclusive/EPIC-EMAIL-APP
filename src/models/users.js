@@ -2,7 +2,7 @@ import moment from 'moment';
 import uuid from 'uuid';
 import jwt from 'jsonwebtoken';
 
-//This class contains the array that will hold the groups groups in objects
+//This class contains the array that will hold the users in objects
 class User{
   
   constructor() {

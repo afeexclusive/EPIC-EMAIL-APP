@@ -1,27 +1,38 @@
-document.getElementById('btnreset').addEventListener('click', reset);
 
-function reset(event) {
+var jwt = localStorage.getItem('sjt');
+// document.getElementById('dis').innerHTML = jwt;
+
+document.getElementById('reset').addEventListener('click', pReset);
+function pReset(event){
     event.preventDefault();
     let prefEmail = document.getElementById('email').value;
     let pass = document.getElementById('password').value;
     let conpass = document.getElementById('conpassword').value;
     if (pass === conpass){
-        password = pass;
-        let pReset = {
+        let resetBody ={
             prefEmail: prefEmail,
-            password: password
-        };
-        fetch('http://localhost:3000/user/:prefEmail',{
-            headers: {"Content-Type": "application/json"},
-            method: "PUT",
-            mode: "cors", //cors, same-origin, no-cors
-            body: JSON.stringify(pReset)
-            // .then((res) => res.json()) NOTE: Never try to recieve server returned json
-            // .then((data) => JSON.stringify(data)) NOTE: if posible dont return data from your endpoint (you may need to do so because cause of testing)
-            .catch((error) => alert(error))
-        });
+            password: pass
+        }
         
+        let url = 'http://localhost:3000/user/' + prefEmail;
+        // document.getElementById('dis').innerHTML = (url);
+
+        fetch(url,{
+        headers: {
+            "Content-Type": "application/json",
+            "Authentication": jwt,
+        },
+        method: "PUT",
+        mode: "cors", //cors, same-origin, no-cors
+        body: JSON.stringify(resetBody)
+        }).then((res) => res.json())
+        .then((data) => {
+            let updated = JSON.stringify(data)
+        document.getElementById('dis').innerHTML = updated;
+    });
+
     }else{
-        alert('Password does not match');
+        alert('Password Does Not Match. Please enter same password twice and try again')
     };
-};
+
+}
