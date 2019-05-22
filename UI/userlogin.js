@@ -22,15 +22,12 @@ function login(event){
             localStorage.setItem('sjt', jtoken);
         }else{
             let ptoken = JSON.parse(jtoken);
-        let mainToken = ptoken.AccessToken;
-        const dtoken = 'Bearer '+mainToken;
-        document.getElementById('dis').innerHTML = dtoken;
-        localStorage.setItem('sjt', dtoken);
+            let mainToken = ptoken.AccessToken;
+            let dtoken = 'Bearer '+mainToken;
+            document.getElementById('dis').innerHTML = dtoken;
+            localStorage.setItem('sjt', dtoken);
         }
         
     });
     
 }
-
-
-

@@ -27,7 +27,8 @@ var app = (0, _express2.default)();
 app.use(_express2.default.json());
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Headers, Accept");
+  req.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Headers, Accept");
   next();
 });
 
@@ -41,7 +42,7 @@ console.log('app running on port ', 3000);
 app.post('/auth/signup', _User2.default.create);
 app.get('/admin/user', _User2.default.view);
 app.get('/admin/user/:prefEmail', _User2.default.viewOne);
-app.put('/user/:prefEmail', _common2.default.checkToken, _User2.default.update);
+app.put('/user/:prefEmail',  _User2.default.update); //_common2.default.checkToken,
 app.delete('/admin/user/:prefEmail', _User2.default.delete);
 app.post('/user/login', _User2.default.login);
 

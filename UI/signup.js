@@ -30,7 +30,8 @@ function signup(event) {
             // .then((data) => JSON.stringify(data)) NOTE: if posible dont return data from your endpoint (you may need to do so because cause of testing)
             // .catch((error) => alert(error))
         });
-        window.location= 'file:///C:/Users/afe%20kunle/epicrepo/EPIC-EMAIL-APP/UI/reset-pasword.html';
+        alert('Successful sign up thanks');
+        // window.location= 'file:///C:/Users/afe%20kunle/epicrepo/EPIC-EMAIL-APP/UI/reset-pasword.html';
         
     }else{
         alert('Password does not match');

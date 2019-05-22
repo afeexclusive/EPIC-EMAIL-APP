@@ -200,7 +200,7 @@ h1{
 
 #btnlist{
 	border: solid;
-	width: 60px;
+	width: 4.5em;
 	border-top: none;
 	border-right: none;
 	border-left: none;
@@ -208,6 +208,17 @@ h1{
 	border-color:blue;
 	cursor: pointer;
 	
+}
+
+#btndetails{
+	border: solid;
+	width: 6em;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	background-color: inherit;
+	border-color:blue;
+	cursor: pointer;
 }
 
 td {
@@ -240,5 +251,16 @@ table{
 	border-radius: 5px;
 	background-position: center;
 	opacity: 0.5;
-	
+}
+
+.visible{
+	display: none;
+	top: 6rem;
+	left: 8.2rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
 }

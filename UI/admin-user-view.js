@@ -1,4 +1,4 @@
-function listuser() {
+function listUser() {
     fetch('http://localhost:3000/admin/user')
     .then(response => response.json())
     .then((data) => {
@@ -23,8 +23,32 @@ function listuser() {
 
     });
 }
+
+function userDetails() {
+    document.getElementById('subemail').style.display = 'block';
+    document.getElementById('subdetails').style.display = 'block';
+        
+}
+
+function fetchDetail(){
+    let prefEmail = document.getElementById('subemail').value;
+            
+    let url ='http://localhost:3000/admin/user' + '/' + prefEmail;
     
-    
+    const option = {
+        headers: {'Content-Type': 'application/json'},
+        method: 'GET',
+        mode: 'cors', //cors, same-origin, no-cors
+    }
+
+    fetch( url, option)
+    .then(response => response.json())
+    .then((response) => { document.getElementById('userlist').innerHTML = JSON.stringify(response)});
+}
+
+
+
+
     // function addCell(tr, val) {
     //     var td = document.createElement('td');
     //     td.innerHTML = val;
