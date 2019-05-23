@@ -23,7 +23,7 @@ function login(event){
         }else{
             let ptoken = JSON.parse(jtoken);
             let mainToken = ptoken.AccessToken;
-            let dtoken = 'Bearer '+mainToken;
+            let dtoken = 'Bearer'+ ' ' +mainToken;
             document.getElementById('dis').innerHTML = dtoken;
             localStorage.setItem('sjt', dtoken);
         }

@@ -1,5 +1,5 @@
 
-// var jwt = localStorage.getItem('sjt');
+var jwt = localStorage.getItem('sjt');
 // document.getElementById('dis').innerHTML = jwt;
 // document.getElementById('reset').addEventListener('click', pReset);
 
@@ -13,22 +13,37 @@ function pReset(){
             prefEmail: prefEmail,
             password: pass
         }
-
-        let url ='http://localhost:3000/user' + '/' + prefEmail;
-                        
-        const option = {
-            headers: {"Content-Type": "application/json"},
-            method: "PUT",
-            mode: "cors",
+        const param = resetBody.prefEmail;
+        const url = 'http://localhost:3000/pass/user'+'/'+param;
+        fetch(url, {
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Authorization': jwt
+            }),
+            mode: 'cors',
+            method: 'post',
             body: JSON.stringify(resetBody)
-        }
+        }).then(res => res.json())
+        .then((data) => document.getElementById('dis').innerHTML= JSON.stringify(data));
+        // document.getElementById('dis').innerHTML = jwt;
         
-        fetch( url, option)
-           .then(res => res.json())
-           .then((res) => {document.getElementById('dis').innerHTML = JSON.stringify(res)});
-
     }else{
         alert('Password Does Not Match. Please enter same password twice and try again')
     };
 
 }
+
+
+// let url ='http://localhost:3000/user' + '/' + prefEmail;
+                        
+//         const option = {
+//             headers: new Headers({"Content-Type": "application/json"}),
+//             method: "PUT",
+//             mode: "cors",
+//             body: JSON.stringify(resetBody)
+//         }
+        
+//         fetch( url, option)
+//            //.then(res => res.json())
+//            //.then((res) => {document.getElementById('dis').innerHTML = JSON.stringify(res)});
+//         alert('success')
