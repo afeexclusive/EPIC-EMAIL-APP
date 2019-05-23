@@ -1,10 +1,10 @@
 
 // var jwt = localStorage.getItem('sjt');
 // document.getElementById('dis').innerHTML = jwt;
+// document.getElementById('reset').addEventListener('click', pReset);
 
-document.getElementById('reset').addEventListener('click', pReset);
-function pReset(event){
-    event.preventDefault();
+function pReset(){
+    // event.preventDefault();
     let prefEmail = document.getElementById('email').value;
     let pass = document.getElementById('password').value;
     let conpass = document.getElementById('conpassword').value;
@@ -14,20 +14,18 @@ function pReset(event){
             password: pass
         }
 
-        let url ='http://localhost:3000/user' + '/' + resetBody.prefEmail;
-
+        let url ='http://localhost:3000/user' + '/' + prefEmail;
+                        
         const option = {
-            headers: {'Content-Type':'application/json'},
-            method: 'PUT',
-            mode: 'cors',
+            headers: {"Content-Type": "application/json"},
+            method: "PUT",
+            mode: "cors",
             body: JSON.stringify(resetBody)
         }
-
+        
         fetch( url, option)
-    //     .then((res) => res.json())
-    //     .then((res) => {
-    //         document.getElementById('dis').innerHTML = JSON.stringify(res);
-    //    });
+           .then(res => res.json())
+           .then((res) => {document.getElementById('dis').innerHTML = JSON.stringify(res)});
 
     }else{
         alert('Password Does Not Match. Please enter same password twice and try again')
