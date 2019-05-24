@@ -18,7 +18,7 @@ function pReset(){
         fetch(url, {
             headers: new Headers({
                 'Content-Type': 'application/json',
-                'Authorization': jwt
+                // 'Authorization': jwt
             }),
             mode: 'cors',
             method: 'post',
@@ -33,17 +33,3 @@ function pReset(){
 
 }
 
-
-// let url ='http://localhost:3000/user' + '/' + prefEmail;
-                        
-//         const option = {
-//             headers: new Headers({"Content-Type": "application/json"}),
-//             method: "PUT",
-//             mode: "cors",
-//             body: JSON.stringify(resetBody)
-//         }
-        
-//         fetch( url, option)
-//            //.then(res => res.json())
-//            //.then((res) => {document.getElementById('dis').innerHTML = JSON.stringify(res)});
-//         alert('success')

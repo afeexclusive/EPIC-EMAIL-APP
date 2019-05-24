@@ -42,7 +42,7 @@ console.log('app running on port ', 3000);
 app.post('/auth/signup', _User2.default.create);
 app.get('/admin/user', _User2.default.view);
 app.get('/admin/user/:prefEmail', _User2.default.viewOne);
-app.post('/pass/user/:prefEmail', _common2.default.checkToken,  _User2.default.update);  //This is actually a PUT method but i changed to post since the response was not sending call back....whatever... 
+app.post('/pass/user/:prefEmail',  _User2.default.update);  //This is actually a PUT method but i changed to post since the response was not sending call back....whatever... [_common2.default.checkToken,]
 app.delete('/admin/user/:prefEmail', _User2.default.delete);
 app.post('/user/login', _User2.default.login);
 
@@ -52,9 +52,9 @@ app.get('/admin/group/:id', _Group2.default.viewOne);
 app.put('/admin/group/:id', _Group2.default.update);
 app.delete('/admin/group/:id', _Group2.default.delete);
 
-app.post('/messages', _common2.default.checkToken, _Message2.default.create);
+app.post('/messages',  _Message2.default.create); //_common2.default.checkToken,
 app.get('/messages', _Message2.default.viewAll);
-app.get('/messages/unread/:to', _common2.default.checkToken, _Message2.default.viewinbox);
-app.get('/messages/sent/:from', _common2.default.checkToken, _Message2.default.viewsent);
-app.get('/messages/:id', _common2.default.checkToken, _Message2.default.viewOne);
-app.delete('/messages/del/:id', _common2.default.checkToken, _Message2.default.delete);
+app.get('/messages/unread/:to', _Message2.default.viewinbox);
+app.get('/messages/sent/:from', _Message2.default.viewsent);
+app.get('/messages/:id', _Message2.default.viewOne);
+app.delete('/messages/del/:id',  _Message2.default.delete);

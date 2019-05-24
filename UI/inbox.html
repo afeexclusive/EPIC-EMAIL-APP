@@ -19,7 +19,7 @@
                         <button class="tablinks" onclick="openDiv(event, 'Inbox')">Inbox</button>
                         <button class="tablinks" onclick="openDiv(event, 'Outbox')">Outbox</button>
                         <button class="tablinks" onclick="openDiv(event, 'Draft')">Draft</button>
-                        <button class="tablinks" onclick="openDiv(event, 'Sent')">Sent</button>
+                        <button class="tablinks" onclick="openDiv(event, 'Sent'), showSent()">Sent</button>
                         <button class="tablinks" onclick="openDiv(event, 'Group')">Group</button>
                         <button id="compose" class="compose" onclick="composemail()">Compose</button>
                     </div>
@@ -61,35 +61,7 @@
                     <div id="Inbox" class="tabcontent">
                         <h3>Inbox</h3>
                         <p>Read and Unread messages goes here.</p>
-                        <table name="inbox" id="incomingmail" class="incomingmail">
-                            <tr>
-                                <td>
-                                    <input type="checkbox">
-                                </td>
-                                <td class="mailsubject"> Tim at Andela</td>
-                                <td>
-                                    <label id="maildate">date/time</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox">
-                                </td>
-                                <td class="mailsubject"> Tim at Andela</td>
-                                <td>
-                                    <label id="maildate">date/time</label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox">
-                                </td>
-                                <td class="mailsubject"> Tim at Andela</td>
-                                <td>
-                                    <label id="maildate">date/time</label>
-                                </td>
-                            </tr>
-                        </table>
+                        
                     </div>
                     <div id="myModal" class="modal">
                         <!-- Modal content -->
@@ -99,22 +71,56 @@
                                 <label for="toemail" class="lemail">
                                     <strong>To:</strong>
                                 </label>
-                                <input type = "text" id = "toemail" class="toemail" placeholder= "" required/>
+                                <input type = "text" id = "toemail" class="toemail" value = "example@epicmail.com" required/>
                             </span>
                             <span>
                                 <label for="subject" class="lsubject">
                                     <strong>Subject:</strong>
                                 </label>
-                                <input type = "text" id = "subject" class="subject" placeholder= "" required/>
+                                <input type = "text" id = "subject" class="subject" value= "Topic" required/>
                             </span>
                             <!-- Message body -->
-                            <textarea placeholder="Compose mail here"></textarea>
+                            <textarea id="messBody" placeholder="Type your message here"></textarea>
                             <span>
                                 <button id="savedraft" class="savedraft">Save As Draft</button>
-                                <button id="send" class="send">Send</button>
+                                <button id="send" class="send" onclick="sendMessage()">Send</button>
                             </span>
                         </div>
                     </main>
                 </body>
-                <script src="tabs.js"></script>
+                <script src="inbox.js"></script>
                 </html>
+
+<!-- 
+                <table name="inbox" id="incomingmail" class="incomingmail">
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td class="mailsubject"> Tim at Andela</td>
+                        <td>
+                            <label id="maildate">date/time</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td class="mailsubject"> Tim at Andela</td>
+                        <td>
+                            <label id="maildate">date/time</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td class="mailsubject"> Tim at Andela</td>
+                        <td>
+                            <label id="maildate">date/time</label>
+                        </td>
+                    </tr>
+                </table> -->
+
+
+
