@@ -91,9 +91,13 @@ main {
   background-color: white;
 }
 
+#logout{
+  left: 990px;
+}
+
 .compose{
   position:absolute;
-  left:950px;
+  left:900px;
   border-radius: 30px;
   border:2px solid #4CAF50;
 }

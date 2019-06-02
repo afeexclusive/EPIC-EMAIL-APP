@@ -31,7 +31,7 @@ function login(event){
             // document.getElementById('dis').innerHTML = dtoken;
             localStorage.setItem('sjt', dtoken);
             alert('Login Success');
-            window.location= 'file:///C:/Users/afe%20kunle/epicrepo/EPIC-EMAIL-APP/UI/inbox.html';
+            window.location= 'http://localhost:3000/inbox.html';
         }
         
     });
