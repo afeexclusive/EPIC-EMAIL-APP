@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Merriweather, serif;
+}
+
+label {
+	color: var(--text, white);
+}
+
+main {
+	background: var(--bg, white);
+	color: var(--text, black);
+}
+
+main {
+	--gradDark: hsl(0, 100%, 100%);
+	--gradLight: hsl(240, 100%, 50%);
+	background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+	padding: 20px 20px 20px 20px;
+	min-height: 97vh;
+	text-align: center;
+}
+
+.wrapper {
+	max-width: 60vh;
+	margin: 0 auto;
+}
+
+.signup {
+	position: absolute;
+	top: 14rem;
+	left: 80rem;
+}
+
+
+input.firstname {
+	position: relative;
+	top: 1rem;
+	left: 0.1rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+input.lastname {
+	position: relative;
+	top: 1rem;
+	left: 2rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+select{
+	position: relative;
+	top: 4.5rem;
+	left: -20.5rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+input.dob {
+	position: relative;
+	top: 2.5rem;
+	left: 12.2rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+input.mobilenum {
+	position: relative;
+	top: 6rem;
+	left: -10.4rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+input.email {
+	position: relative;
+	top: 6rem;
+	left: -8.2rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+input.password {
+	position: relative;
+	top: 8rem;
+	left: -5.4rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+input.conpassword {
+	position: relative;
+	top: 8rem;
+	left: -3rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}
+
+p.altsignin {
+	position: absolute;
+	top: 14rem;
+	left: 50px;
+}
+
+button.adduser{
+	position: absolute;
+	top: 280px;
+	left: 150px;
+	padding: 5px 25px 5px 25px;
+	border-radius: 10px;
+	color: blue;
+	background-color: white;
+	font-size: 16px
+}
+
+
+input.btnsignup{
+	position: absolute;
+	top: 280px;
+	left: 150px;
+	padding: 5px 25px 5px 25px;
+	border-radius: 10px;
+	color: blue;
+	background-color: white;
+	font-size: 16px
+}
+
+p{
+  position:fixed;
+  left:80px;
+	top: 100px;
+	text-align: center;
+}
+
+
+h1{
+  position:fixed;
+  left:50px;
+  top:50px;
+}
+
+
+#form {
+    top: 160px;
+    text-align:center;
+    left:38px;
+    background-color:none;
+    height:400px;
+    width:550px;
+}
+
+#userlist{
+	position: relative;
+	margin-top: 20vh;
+  text-align:center;
+  min-height:60%;
+	width:90%;
+	margin-left: 7vh;
+	background-color: #fff;
+	flex-wrap: wrap;
+}
+
+#btnlist{
+	border: solid;
+	width: 4.5em;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	background-color: inherit;
+	border-color:blue;
+	cursor: pointer;
+	
+}
+
+#btndetails{
+	border: solid;
+	width: 6em;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	background-color: inherit;
+	border-color:blue;
+	cursor: pointer;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:hover {
+  background-color:  #F0F8FF;
+}
+
+
+tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+table{
+	border-collapse: collapse;
+  width: 100%
+}
+
+#flymail{
+	background-image: url(./flymail.png);
+	position: absolute;
+	width: 40vh;
+	height: 25vh;
+	top: 30vh;
+	left: 55%;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+	background-position: center;
+	opacity: 0.5;
+}
+
+.visible{
+	display: none;
+	top: 6rem;
+	left: 8.2rem;
+	height: 2rem;
+	width: 10rem;
+	border: 2px solid blue;
+	border-radius:4px;
+	text-align: center;
+	font-size: 0.7rem;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="signup.css">
+	</head>
+	<body>
+		<div class="page">
+			<!--Main page content-->
+			<main>
+				<div class="wrapper">
+					<h1>WELCOME to EPIC Mail</h1>
+					<p class="main">Experience Conversation like no other</p>
+				</div>
+				
+				<div id="form" class="signup">
+					<input type = "text" id = "firstname" class="firstname" placeholder= "First Name" required/>
+					<input type = "text" id = "lastname" class="lastname" placeholder= "Last Name" required/>
+					<select id="gender">
+						<option value="Male">MALE</option>
+						<option value="Female">FEMALE</option>
+					</select>
+					<input type="date" class="dob" id="dob"/>
+					<input type = "text" id = "mobilenum" class="mobilenum" placeholder= "Mobile Number" required/>
+					<input type = "text" id = "email" class="email" placeholder= "Preferred E-mail address" required/>
+					<input type = "password" id = "password" class="password" placeholder= "Choose your password" required/>
+					<input type = "password" id = "conpassword" class="conpassword" placeholder= "Comfirm password" required/>
+					<input type="submit" value="Sign Up" id="btnsignup" class="btnsignup"></input>
+					<p id="altlogin" class="altsignin"> <a href="./userlogin.html">Already have an account yet? Sign in here</a> </p>
+				</div>
+				<div id="flymail" ></div>
+			</main>
+		</div>
+		<script src="signup.js"></script>
+	</body>
+</html>                                                                        

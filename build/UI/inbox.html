@@ -1,0 +1,126 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        </head>
+        <link rel="stylesheet" href="inboxstyle.css">
+        <body>
+            <div class="page">
+                <!--Main page content-->
+                <main>
+                    <div class="wrapper">
+                        <h1>EPIC Mail</h1>
+                        <p class="epic">
+                            <strong>Experience Conversation like no other</strong>
+                        </p>
+                    </div>
+                    <div class="tab">
+                        <button class="tablinks" onclick="openDiv(event, 'Inbox')">Inbox</button>
+                        <button class="tablinks" onclick="openDiv(event, 'Outbox')">Outbox</button>
+                        <button class="tablinks" onclick="openDiv(event, 'Draft')">Draft</button>
+                        <button class="tablinks" onclick="openDiv(event, 'Sent'), showSent()">Sent</button>
+                        <button class="tablinks" onclick="openDiv(event, 'Group')">Group</button>
+                        <button id="compose" class="compose" onclick="composemail()">Compose</button>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="Outbox" class="tabcontent">
+                        <h3>Outbox</h3>
+                        <p>Retracted messages goes here.</p>
+                    </div>
+                    <div id="Draft" class="tabcontent">
+                        <h3>Draft</h3>
+                        <p>Saved messages goes here</p>
+                    </div>
+                    <div id="Sent" class="tabcontent">
+                        <h3>Sent</h3>
+                        <p>Sent messages goes here</p>
+                    </div>
+                    <div id="Group" class="tabcontent">
+                        <h3>Group</h3>
+                        <p id="creategroup" class="creategroup" onclick="createGroup()">
+                            <u>Create groups here</u>
+                        </p>
+                        <div id="groupwrapper" class="groupwrapper">
+                            <span>
+                                <input type = "text" id = "groupname" class="groupname" placeholder= "Enter Group Name" required/>
+                            </span>
+                            <span>
+                                <button id="adduser" class="adduser" onclick="addInput()">
+                                    <strong> + Add User </strong>
+                                </button>
+                            </span>
+                            <span>
+                                <button id="creategroupbtn" class="creategroupbtn">
+                                    <strong>Create Group</strong>
+                                </button>
+                            </span>
+                        </div>
+                        <input type="text" id="email" class="email" placeholder="Type a user E-mail address" required/>
+                    </div>
+                    <div id="Inbox" class="tabcontent">
+                        <h3>Inbox</h3>
+                        <p>Read and Unread messages goes here.</p>
+                        
+                    </div>
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close" onclick="closespan()">&times;</span>
+                            <span>
+                                <label for="toemail" class="lemail">
+                                    <strong>To:</strong>
+                                </label>
+                                <input type = "text" id = "toemail" class="toemail" value = "example@epicmail.com" required/>
+                            </span>
+                            <span>
+                                <label for="subject" class="lsubject">
+                                    <strong>Subject:</strong>
+                                </label>
+                                <input type = "text" id = "subject" class="subject" value= "Topic" required/>
+                            </span>
+                            <!-- Message body -->
+                            <textarea id="messBody" placeholder="Type your message here"></textarea>
+                            <span>
+                                <button id="savedraft" class="savedraft">Save As Draft</button>
+                                <button id="send" class="send" onclick="sendMessage()">Send</button>
+                            </span>
+                        </div>
+                    </main>
+                </body>
+                <script src="inbox.js"></script>
+                </html>
+
+<!-- 
+                <table name="inbox" id="incomingmail" class="incomingmail">
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td class="mailsubject"> Tim at Andela</td>
+                        <td>
+                            <label id="maildate">date/time</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td class="mailsubject"> Tim at Andela</td>
+                        <td>
+                            <label id="maildate">date/time</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox">
+                        </td>
+                        <td class="mailsubject"> Tim at Andela</td>
+                        <td>
+                            <label id="maildate">date/time</label>
+                        </td>
+                    </tr>
+                </table> -->
+
+
+

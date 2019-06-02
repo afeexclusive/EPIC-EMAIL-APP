@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Merriweather, serif;
+}
+
+main {
+	background: var(--bg, white);
+	color: var(--text, black);
+}
+
+main {
+	--gradDark: hsl(0, 100%, 100%);
+	--gradLight: hsl(240, 100%, 50%);
+	background: linear-gradient(to bottom, var(--gradDark), var(--gradLight));
+	padding: 20px 20px 20px 20px;
+	min-height: 98vh;
+	text-align: center;
+}
+
+.wrapper {
+	position:absolute;
+	min-width: 210px;
+	left: 10px;
+	top: 2px;
+}
+
+.epic{
+  position:absolute;
+  left:8px;
+  top: 50px;
+  font-size:10px;
+}
+
+#form {
+    top: 160px;
+    text-align:center;
+    left:40px;
+    background-color:none;
+    height:400px;
+    width:550px;
+}
+
+/* Style the tab */
+.tab {
+  min-width: 1075px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  position: absolute;
+  left: 250px;
+  top: 30px; 
+
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: block;
+  position:absolute;  
+  top: 75px;
+  left: 250px;
+  min-width: 1075px;
+  min-height: 400px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: white;
+}
+
+.compose{
+  position:absolute;
+  left:950px;
+  border-radius: 30px;
+  border:2px solid #4CAF50;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  padding: 0px;
+  border: 2px solid Black;
+  width: 45%;
+  height: 70%;
+}
+
+/* sets of inputs */ 
+input.toemail {
+  position: relative;
+  top: 5px;
+  left: 0px;
+  height: 6%;
+  width: 100%;
+  border-bottom: 1px solid blue;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: left;
+  font-size: 14px;
+}
+
+input.subject {
+  position: relative;
+  top: 20px;
+  left: 0px;
+  height: 6%;
+  width: 100%;
+  border-bottom: 1px solid blue;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: left;
+  font-size: 14px;
+}
+
+.lemail{
+  position: relative;
+  top: 20px;
+  right: 257px;
+}
+
+.lsubject{
+  position: relative;
+  top: 20px;
+  right: 255px;
+
+}
+
+/*style the text area*/
+textarea{
+  position: relative;
+  top: 20px;
+  left: 0px;
+  height: 60%;
+  width: 99%;
+  border: none;
+  font-size: 14px;
+}
+
+/*Buttons*/
+button{
+  position: relative;
+  border-radius: 5px;
+}
+
+button.savedraft{
+  top: 20px;
+  right: 220px;
+}
+
+button.send{
+  top: 20px;
+  left:  215px;
+  background-color: hsl(241, 90%, 50%);
+  color: white;
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styling the group features*/
+
+#creategroup{
+  color: blue;
+  cursor: pointer;
+}
+
+input.email {
+  position: fixed;
+  top: 14rem;
+  left: 41.5rem;
+  height: 2rem;
+  width: 15rem;
+  border: 2px solid blue;
+  border-radius:4px;
+  text-align: center;
+  font-size: 0.9rem;
+ display: none;
+}
+
+
+input.groupname {
+  position: fixed;
+  left: 41.5rem;
+  height: 2rem;
+  width: 15rem;
+  border: 2px solid blue;
+  border-radius:4px;
+  text-align: center;
+  font-size: 0.9rem;
+ display: none;
+ background-color: rgb(0,0,0,0.1);
+}
+
+
+button.creategroupbtn{
+  position: fixed;
+  left:28rem;
+  padding: 5px 25px 5px 25px;
+  border-radius: 10px;
+  color: blue;
+  background-color: white;
+  font-size: 16px;
+  display: none;
+}
+
+button.adduser{
+  position: fixed;
+  left: 60rem;
+  padding: 5px 25px 5px 25px;
+  border-radius: 10px;
+  color: blue;
+  background-color: white;
+  font-size: 16px;
+  display: none;
+}
+
+.groupwrapper {
+  position:absolute;
+  min-width: 900px;
+  left: 100px;
+  top: 100px;
+}
+
+#incomingmail{
+  border-collapse: collapse;
+  width: 100%
+}
+
+#incomingmail td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#incomingmail tr:hover {
+  background-color:  #F0F8FF;
+}
+
+
+#incomingmail tr:nth-child(even){
+  background-color: #f2f2f2;
+}

@@ -32,9 +32,12 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('/', function (req, res) {
-  return res.status(200).send({ 'message': 'Epic email API end point' });
-});
+// app.get('/', function (req, res) {
+//   return res.status(200).send({ 'message': 'Epic email API end point' });
+// });
+
+app.use(_express2.default.static("UI"));
+
 
 module.exports = app.listen(3000);
 console.log('app running on port ', 3000);
