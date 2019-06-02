@@ -36,7 +36,7 @@ app.use(function(req, res, next) {
 //   return res.status(200).send({ 'message': 'Epic email API end point' });
 // });
 
-app.use(_express2.default.static("UI"));
+app.use(_express2.default.static("public"));
 
 
 module.exports = app.listen(3000);
