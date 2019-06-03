@@ -2,10 +2,11 @@
   "name": "epicmail",
   "version": "1.0.0",
   "description": "Epic Mail is an email web-app",
-  "main": " node index.js",
+  "main": " index.js",
   "scripts": {
     "test": "mocha build/test/user.js --timeout 10000",
-    "build": "babel ./test/user.js --out-dir build"
+    "build": "babel ./test/user.js --out-dir build",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
