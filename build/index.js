@@ -36,8 +36,14 @@ app.use(function(req, res, next) {
 //   return res.status(200).send({ 'message': 'Epic email API end point' });
 // });
 
-module.exports = app.listen(3000);
-console.log('app running on port ', 3000);
+app.set( 'port', ( process.env.PORT || 5000 ));
+app.listen( app.get( 'port' ), function() {
+  console.log( 'Node server is running on port ' + app.get( 'port' ));
+  });
+  // module.exports = app.listen(3000);
+  // console.log('app running on port ', 3000);
+
+
 
 app.post('/auth/signup', _User2.default.create);
 app.get('/admin/user', _User2.default.view);
