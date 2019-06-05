@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/afeexclusive/EpicMail.git"
+    "url": "git+https://github.com/afeexclusive/EPIC-EMAIL-APP.git"
   },
   "author": "Afe Ayokunle",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/afeexclusive/EpicMail/issues"
+    "url": "https://github.com/afeexclusive/EPIC-EMAIL-APP/issues"
   },
-  "homepage": "https://github.com/afeexclusive/EpicMail#readme",
+  "homepage": "https://github.com/afeexclusive/EPIC-EMAIL-APP#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
