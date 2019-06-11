@@ -21,7 +21,7 @@ function signup(event) {
             dateOfBirth: dateOfBirth,
             password: password
         };
-        fetch('http://localhost:3000/auth/signup',{
+        fetch('http://localhost:5000/auth/signup',{
             headers: {"Content-Type": "application/json"},
             method: "POST",
             mode: "cors", //cors, same-origin, no-cors

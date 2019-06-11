@@ -10,7 +10,7 @@ function login(event){
         password: password
     };
     
-    fetch('http://localhost:3000/user/login',{
+    fetch('http://localhost:5000/user/login',{
     headers: {"Content-Type": "application/json"},
     method: "POST",
     mode: "cors", //cors, same-origin, no-cors

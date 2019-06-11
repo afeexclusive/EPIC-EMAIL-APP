@@ -1,9 +1,8 @@
 
-
 var from = localStorage.getItem('currentUser');
 alert('Welcome to your inbox ' +from);
 
-let url = 'http://localhost:3000/messages/unread' + '/' + from
+let url = 'http://localhost:5000/messages/unread' + '/' + from
 fetch(url)
     .then(response => response.json())
     .then((data) => {
@@ -48,7 +47,7 @@ function sendMessage(){
     alert('Opps, you forgot to specify the recipient')
     document.getElementById('toemail').value = ""
   }else{
-    fetch('http://localhost:3000/messages',{
+    fetch('http://localhost:5000/messages',{
       headers: {"Content-Type": "application/json"},
       method: "POST",
       mode: "cors", //cors, same-origin, no-cors
@@ -60,7 +59,7 @@ function sendMessage(){
 
 function showSent(){
   let from = localStorage.getItem('currentUser');
-  let url = 'http://localhost:3000/messages/sent' + '/' + from
+  let url = 'http://localhost:5000/messages/sent' + '/' + from
   // document.getElementById('Sent').innerHTML = url;
     fetch(url)
         .then(response => response.json())
@@ -137,4 +136,3 @@ function createGroup(){
   document.getElementById("creategroupbtn").style.display='block';
   document.getElementById('groupname').style.display='block';
 }
-

@@ -14,7 +14,7 @@ function pReset(){
             password: pass
         }
         const param = resetBody.prefEmail;
-        const url = 'http://localhost:3000/pass/user'+'/'+param;
+        const url = 'http://localhost:5000/pass/user'+'/'+param;
         fetch(url, {
             headers: new Headers({
                 'Content-Type': 'application/json',
