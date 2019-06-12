@@ -23,8 +23,9 @@ function pReset(){
             mode: 'cors',
             method: 'post',
             body: JSON.stringify(resetBody)
-        }).then(res => res.json())
-        .then((data) => document.getElementById('dis').innerHTML= JSON.stringify(data));
+        }).then(res => res.json());
+        document.getElementById('passmsg').innerHTML= ('<b>'+'Password Reset Successful'+'</b>');
+        // .then((data) => document.getElementById('dis').innerHTML= JSON.stringify(data));
         // document.getElementById('dis').innerHTML = jwt;
         
     }else{
