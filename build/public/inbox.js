@@ -57,37 +57,32 @@ function sendMessage(){
   }
 }
 
-// function showSent(){
-  
+function showSent(){
+  document.getElementById('Sent').innerHTML = ('<h3>'+'Sent Messages'+'</h3>'+'<br>')
   let from = localStorage.getItem('currentUser');
   let url = 'http://localhost:5000/messages/sent' + '/' + from
-  // document.getElementById('Sent').innerHTML = url;
-    fetch(url)
-        .then(response => response.json())
-        .then((data) => {
-            let table = document.createElement("table");
-            table.setAttribute('id', 'incomingmail')
-            let row = table.insertRow();
-            for (var i=0; i<data.length; i++){
-                let cell1 = row.insertCell();
-                cell1.innerHTML = data[i].id
-                let cell2 = row.insertCell();
-                cell2.innerHTML = data[i].to
-                let cell3 = row.insertCell();
-                cell3.innerHTML = data[i].subject
-                let cell4 = row.insertCell();
-                cell4.innerHTML = data[i].createdOn
-                
-                // cell3.addEventListener('click', tableDetails)
-                row = table.insertRow();
-                // localStorage.setItem('email', data[i].prefEmail )
-                
-            };
-            document.getElementById('Sent').appendChild(table);
+  fetch(url)
+  .then(response => response.json())
+  .then((data) => {
+    let table = document.createElement("table");
+    table.setAttribute('id', 'incomingmail')
+    let row = table.insertRow();
+    for (var i=0; i<data.length; i++){
+      let cell1 = row.insertCell();
+      cell1.innerHTML = data[i].id
+      let cell2 = row.insertCell();
+      cell2.innerHTML = data[i].to
+      let cell3 = row.insertCell();
+      cell3.innerHTML = data[i].subject
+      let cell4 = row.insertCell();
+      cell4.innerHTML = data[i].createdOn
+      row = table.insertRow();
+    };
+    document.getElementById('Sent').appendChild(table);
             
-        });
+  });
 
-// }
+}
 
 
 function openDiv(evt, inboxMenu) {
@@ -135,3 +130,6 @@ function createGroup(){
   document.getElementById('groupname').style.display='block';
 }
 
+// document.getElementById('Sent').innerHTML = url;
+// cell3.addEventListener('click', tableDetails)
+// localStorage.setItem('email', data[i].prefEmail )
