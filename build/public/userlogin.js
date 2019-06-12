@@ -10,7 +10,7 @@ function login(event){
         password: password
     };
     
-    fetch('http://localhost:5000/user/login',{
+    fetch('https://thawing-plateau-13607.herokuapp.com/user/login',{
     headers: {"Content-Type": "application/json"},
     method: "POST",
     mode: "cors", //cors, same-origin, no-cors
@@ -31,7 +31,7 @@ function login(event){
             // document.getElementById('dis').innerHTML = dtoken;
             localStorage.setItem('sjt', dtoken);
             alert('Login Success');
-            window.location= 'http://localhost:5000/inbox.html';
+            window.location= 'https://thawing-plateau-13607.herokuapp.com/inbox.html';
         }
         
     });

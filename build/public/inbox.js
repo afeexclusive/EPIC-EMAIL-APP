@@ -3,7 +3,7 @@
 var from = localStorage.getItem('currentUser');
 alert('Welcome to your inbox ' +from);
 
-let url = 'http://localhost:5000/messages/unread' + '/' + from
+let url = 'https://thawing-plateau-13607.herokuapp.com/messages/unread' + '/' + from
 fetch(url)
     .then(response => response.json())
     .then((data) => {
@@ -47,7 +47,7 @@ function sendMessage(){
     alert('Opps, you forgot to specify the recipient')
     document.getElementById('toemail').value = ""
   }else{
-    fetch('http://localhost:5000/messages',{
+    fetch('https://thawing-plateau-13607.herokuapp.com/messages',{
       headers: {"Content-Type": "application/json"},
       method: "POST",
       mode: "cors", //cors, same-origin, no-cors
@@ -60,7 +60,7 @@ function sendMessage(){
 function showSent(){
   document.getElementById('Sent').innerHTML = ('<h3>'+'Sent Messages'+'</h3>'+'<br>')
   let from = localStorage.getItem('currentUser');
-  let url = 'http://localhost:5000/messages/sent' + '/' + from
+  let url = 'https://thawing-plateau-13607.herokuapp.com/messages/sent' + '/' + from
   fetch(url)
   .then(response => response.json())
   .then((data) => {
