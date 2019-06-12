@@ -57,7 +57,8 @@ function sendMessage(){
   }
 }
 
-function showSent(){
+// function showSent(){
+  
   let from = localStorage.getItem('currentUser');
   let url = 'http://localhost:5000/messages/sent' + '/' + from
   // document.getElementById('Sent').innerHTML = url;
@@ -86,7 +87,7 @@ function showSent(){
             
         });
 
-}
+// }
 
 
 function openDiv(evt, inboxMenu) {
