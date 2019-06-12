@@ -31,7 +31,7 @@ function signup(event) {
             // .catch((error) => alert(error))
         });
         alert('Successful sign up thanks');
-        // window.location= 'file:///C:/Users/afe%20kunle/epicrepo/EPIC-EMAIL-APP/UI/reset-pasword.html';
+        
         
     }else{
         alert('Password does not match');

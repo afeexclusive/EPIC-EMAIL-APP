@@ -21,7 +21,7 @@ function signup(event) {
             dateOfBirth: dateOfBirth,
             password: password
         };
-        fetch('http://localhost:3000/auth/signup',{
+        fetch('http://localhost:5000/auth/signup',{
             headers: {"Content-Type": "application/json"},
             method: "POST",
             mode: "cors", //cors, same-origin, no-cors
@@ -31,7 +31,7 @@ function signup(event) {
             // .catch((error) => alert(error))
         });
         alert('Successful sign up thanks');
-        window.location= 'http://localhost:3000/userlogin.html';
+        window.location= 'http://localhost:5000/userlogin.html';
         
     }else{
         alert('Password does not match');

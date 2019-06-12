@@ -1,5 +1,5 @@
 function listUser() {
-    fetch('http://localhost:3000/admin/user')
+    fetch('http://localhost:5000/admin/user')
     .then(response => response.json())
     .then((data) => {
         let table = document.createElement("table");
@@ -38,7 +38,7 @@ function userDetails() {
 function tableDetails(){
     let prefEmail = localStorage.getItem('email')
             
-    let url ='http://localhost:3000/admin/user' + '/' + prefEmail;
+    let url ='http://localhost:5000/admin/user' + '/' + prefEmail;
         
     const option = {
         headers: {'Content-Type': 'application/json'},
@@ -122,7 +122,7 @@ function tableDetails(){
 function fetchDetail(){
     let prefEmail = document.getElementById('subemail').value;
             
-    let url ='http://localhost:3000/admin/user' + '/' + prefEmail;
+    let url ='http://localhost:5000/admin/user' + '/' + prefEmail;
     
     const option = {
         headers: {'Content-Type': 'application/json'},
