@@ -264,3 +264,148 @@ table{
 	text-align: center;
 	font-size: 0.7rem;
 }
+
+
+
+
+
+
+/* start of desktop styles */
+
+@media screen and (max-width: 991px) {
+	/* start of large tablet styles */
+	
+	}
+	
+	@media screen and (max-width: 767px) {
+	/* start of medium tablet styles */
+	
+	}
+	
+	@media screen and (max-width: 479px) {
+	/* start of phone styles */
+
+	#flymail{
+		display: none;
+	}
+	
+
+	.signup {
+		position: absolute;
+		left: 2%;
+		/* top: 14rem;
+		left: 80rem; */
+	}
+	
+	
+	input.firstname {
+		width: 30%;
+		border: 2px solid blue;
+		border-radius:4px;
+		text-align: center;
+		font-size: 0.7rem;
+	}
+	
+	input.lastname {
+		width: 30%;
+		border: 2px solid blue;
+		border-radius:4px;
+		text-align: center;
+		font-size: 0.7rem;
+	}
+	
+	select{
+		width: 30%;
+		border: 2px solid blue;
+		border-radius:4px;
+		text-align: center;
+		font-size: 0.7rem;
+	}
+	
+	input.dob {
+		width: 30%;
+		border: 2px solid blue;
+		border-radius:4px;
+		text-align: center;
+		font-size: 0.8rem;
+	}
+	
+	input.mobilenum {
+		width: 30%;
+		border: 2px solid blue;
+		border-radius:4px;
+		text-align: center;
+		font-size: 0.7rem;
+	}
+	
+	input.email {
+		width: 30%;
+		border: 2px solid blue;
+		border-radius:4px;
+		text-align: center;
+		font-size: 0.7rem;
+	}
+	
+	input.password {
+		width: 30%;
+		border: 2px solid blue;
+		border-radius:4px;
+		text-align: center;
+		font-size: 0.7rem;
+	}
+	
+	input.conpassword {
+		width: 30%;
+		border: 2px solid blue;
+		border-radius:4px;
+		text-align: center;
+		font-size: 0.7rem;
+	}
+	
+	p.altsignin {
+		position: relative;
+		
+	}
+	
+	button.adduser{
+		position: absolute;
+		top: 280px;
+		left: 150px;
+		padding: 5px 25px 5px 25px;
+		border-radius: 10px;
+		color: blue;
+		background-color: white;
+		font-size: 16px
+	}
+	
+	p > a{
+		position: relative;
+		left: 1%;
+		color: #F0F8FF;
+	}
+
+	input.btnsignup{
+		padding: 5px 25px 5px 25px;
+		border-radius: 10px;
+		color: blue;
+		background-color: white;
+		font-size: 16px
+	}
+
+	p{
+	  position:fixed;
+	  left:120px;
+	  top: 100px;
+	  text-align: center;
+	  width:60%
+	}
+	
+	
+	h1{
+	  position:fixed;
+	  left:50px;
+	  top:50px;
+	}
+	
+	
+	}
